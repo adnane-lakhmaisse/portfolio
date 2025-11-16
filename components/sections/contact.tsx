@@ -3,14 +3,16 @@
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import { Button } from "@/components/ui/button"
-import { Mail, Github, Linkedin, Twitter } from "lucide-react"
+import { Mail, Github, Linkedin, Twitter, Instagram, MessageCircle } from "lucide-react"
 import { ContactForm } from "./contact-form"
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
-  { icon: Mail, label: "Email", href: "mailto:hello@example.com" },
+  { icon: Github, label: "GitHub", href: "https://github.com/adnane-lakhmaisse" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/in/adnane-lakhmisse" },
+  { icon: Twitter, label: "Twitter", href: "https://x.com/guizmo__x" },
+  { icon: Instagram, label: "Instagram", href: "https://instagram.com/guizmo_x" },
+  { icon: MessageCircle, label: "Discord", href: "https://discord.gg/duPazKBXE" },
+  { icon: Mail, label: "Email", href: "mailto:adnanlakhmiss@icloud.com" },
 ]
 
 export function Contact() {

@@ -54,10 +54,10 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Full-Stack Developer
+            Adnane Lakhmaisse
             <br />
-            <span className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent">
-              & UI Engineer
+            <span className="bg-gradient-to-r from-white to-white/70 bg-clip-text text-transparent text-4xl md:text-6xl lg:text-7xl">
+              Full Stack Developer
             </span>
           </motion.h1>
 
@@ -67,8 +67,11 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Crafting premium digital experiences with modern technologies
-            and elegant design.
+            React & Node.js Specialist • Open Source Enthusiast
+            <br />
+            <span className="text-base md:text-lg text-white/60">
+              Turning ideas into reality • Beni Mellal, Morocco 🇲🇦
+            </span>
           </motion.p>
 
           <motion.div

@@ -11,34 +11,62 @@ import {
   GitBranch,
   Layers,
   Zap,
+  Palette,
+  Server,
+  Box,
 } from "lucide-react"
 
 const skillCategories = [
   {
-    title: "Frontend",
+    title: "Frontend Development",
     skills: [
       { name: "React", icon: Code2 },
       { name: "Next.js", icon: Globe },
       { name: "TypeScript", icon: Code2 },
-      { name: "Tailwind CSS", icon: Layers },
+      { name: "JavaScript", icon: Code2 },
+      { name: "Redux", icon: Layers },
+      { name: "React Router", icon: Globe },
+      { name: "React Hook Form", icon: Layers },
     ],
   },
   {
-    title: "Backend",
+    title: "Styling & UI",
     skills: [
-      { name: "Node.js", icon: Database },
-      { name: "PostgreSQL", icon: Database },
-      { name: "MongoDB", icon: Database },
-      { name: "REST APIs", icon: Cloud },
+      { name: "HTML5", icon: Layers },
+      { name: "CSS3", icon: Palette },
+      { name: "Tailwind CSS", icon: Palette },
+      { name: "Bootstrap", icon: Palette },
+      { name: "Material-UI", icon: Palette },
     ],
   },
   {
-    title: "Tools & Others",
+    title: "Backend Development",
+    skills: [
+      { name: "Node.js", icon: Server },
+      { name: "Express.js", icon: Server },
+      { name: "PHP", icon: Code2 },
+      { name: "Laravel", icon: Server },
+      { name: "Python", icon: Code2 },
+      { name: "JWT", icon: Cloud },
+    ],
+  },
+  {
+    title: "Databases",
+    skills: [
+      { name: "MongoDB", icon: Database },
+      { name: "MySQL", icon: Database },
+      { name: "PostgreSQL", icon: Database },
+    ],
+  },
+  {
+    title: "Tools & Deployment",
     skills: [
       { name: "Git", icon: GitBranch },
-      { name: "Docker", icon: Cloud },
-      { name: "Mobile", icon: Smartphone },
-      { name: "Performance", icon: Zap },
+      { name: "GitHub", icon: GitBranch },
+      { name: "Vercel", icon: Cloud },
+      { name: "Netlify", icon: Cloud },
+      { name: "Postman", icon: Box },
+      { name: "Chart.js", icon: Zap },
     ],
   },
 ]

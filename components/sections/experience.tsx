@@ -5,25 +5,13 @@ import { useInView } from "react-intersection-observer"
 
 const experiences = [
   {
-    title: "Senior Full-Stack Developer",
-    company: "Tech Company",
-    period: "2022 - Present",
+    title: "Internship - Full Stack Developer",
+    company: "Europcar Maroc",
+    location: "Casablanca",
+    period: "April 2025 (1 month)",
     description:
-      "Leading development of scalable web applications, mentoring junior developers, and implementing best practices across the engineering team.",
-  },
-  {
-    title: "Full-Stack Developer",
-    company: "Startup Inc.",
-    period: "2020 - 2022",
-    description:
-      "Built and maintained multiple client-facing applications, optimized performance, and collaborated with design teams to create exceptional user experiences.",
-  },
-  {
-    title: "Frontend Developer",
-    company: "Digital Agency",
-    period: "2018 - 2020",
-    description:
-      "Developed responsive web applications using modern frameworks, worked closely with clients to deliver pixel-perfect implementations.",
+      "Design and development of a vehicle fleet management system with integrated statistical dashboards (maintenance, vehicles, contracts). Collaborated with business teams to improve SQL performance and user experience.",
+    technologies: ["React.js", "Next.js", "Express.js", "SQL Server", "Chart.js", "ECharts", "Tailwind CSS", "MUI"],
   },
 ]
 
@@ -100,14 +88,32 @@ function ExperienceItem({
         <h3 className="text-2xl font-semibold text-white">
           {experience.title}
         </h3>
-        <div className="flex items-center gap-3 text-white/70">
+        <div className="flex items-center gap-3 text-white/70 flex-wrap">
           <span className="font-medium">{experience.company}</span>
+          {experience.location && (
+            <>
+              <span className="text-white/40">•</span>
+              <span>{experience.location}</span>
+            </>
+          )}
           <span className="text-white/40">•</span>
           <span>{experience.period}</span>
         </div>
-        <p className="text-white/70 leading-relaxed max-w-2xl">
+        <p className="text-white/70 leading-relaxed max-w-2xl mb-3">
           {experience.description}
         </p>
+        {experience.technologies && (
+          <div className="flex flex-wrap gap-2 mt-3">
+            {experience.technologies.map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 text-xs rounded-full bg-white/5 border border-white/5 text-white/70"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </motion.div>
   )
