@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0C0C0C;
+  --foreground: #FFFFFF;
+  --card: #121212;
+  --card-foreground: #FFFFFF;
+  --border: rgba(255, 255, 255, 0.08);
+  --muted: #181818;
+  --muted-foreground: rgba(255, 255, 255, 0.7);
+  
+  /* Apple Dark Theme Colors */
+  --apple-bg-primary: #0C0C0C;
+  --apple-bg-secondary: #0E0E0E;
+  --apple-card: #121212;
+  --apple-card-hover: #181818;
+  --apple-text-primary: rgba(255, 255, 255, 0.9);
+  --apple-text-secondary: rgba(255, 255, 255, 0.7);
+  --apple-text-tertiary: rgba(255, 255, 255, 0.5);
+  --apple-border: rgba(255, 255, 255, 0.05);
+  --apple-glow: rgba(255, 255, 255, 0.03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(180deg, var(--apple-bg-primary) 0%, var(--apple-bg-secondary) 100%);
+  color: var(--foreground);
+  font-family: var(--font-sf-pro), system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Smooth scroll with Lenis */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--apple-bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Utility classes */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .glass-card {
+    background: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--apple-border);
+  }
+  
+  .apple-glow {
+    box-shadow: 0 0 40px var(--apple-glow);
+  }
+  
+  .premium-border {
+    border: 1px solid var(--apple-border);
+  }
+  
+  .bg-gradient-radial {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+  }
+}
+
