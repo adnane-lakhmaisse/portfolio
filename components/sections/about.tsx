@@ -28,10 +28,10 @@ export function About() {
           </h2>
           <div className="h-px w-16 bg-white/10 mb-8" />
           <p className="text-lg text-white/70 leading-relaxed mb-6">
-            Hey there! I'm <span className="text-white font-semibold">Adnane Lakhmaisse</span>, a <span className="text-white/90">Specialized Technician in Full-Stack Web Development</span> based in <span className="text-white/90">Beni Mellal, Morocco 🇲🇦</span>. Passionate about creating efficient and modern digital solutions, I master front-end and back-end technologies with strong adaptability and team spirit. Motivated by innovation, continuous learning, and solving concrete problems.
+            Hey there! I&apos;m <span className="text-white font-semibold">Adnane Lakhmaisse</span>, a <span className="text-white/90">Specialized Technician in Full-Stack Web Development</span> based in <span className="text-white/90">Beni Mellal, Morocco 🇲🇦</span>. Passionate about creating efficient and modern digital solutions, I master front-end and back-end technologies with strong adaptability and team spirit. Motivated by innovation, continuous learning, and solving concrete problems.
           </p>
           <p className="text-lg text-white/70 leading-relaxed mb-6">
-            Currently, I'm diving deep into <span className="text-white/90">Next.js</span>, <span className="text-white/90">TypeScript</span>, and <span className="text-white/90">Advanced React Patterns</span>. My passion lies in clean code, UI/UX design, and contributing to open source projects. I believe in coding with passion and building with purpose.
+            Currently, I&apos;m diving deep into <span className="text-white/90">Next.js</span>, <span className="text-white/90">TypeScript</span>, and <span className="text-white/90">Advanced React Patterns</span>. My passion lies in clean code, UI/UX design, and contributing to open source projects. I believe in coding with passion and building with purpose.
           </p>
           
           {/* Education */}
@@ -50,7 +50,7 @@ export function About() {
           </div>
 
           <p className="text-lg text-white/70 leading-relaxed">
-            I'm always open to collaborating on innovative projects, creative web solutions, and helping with performance optimization, UI/UX improvements, and code reviews. Let's build something amazing together!
+            I&apos;m always open to collaborating on innovative projects, creative web solutions, and helping with performance optimization, UI/UX improvements, and code reviews. Let&apos;s build something amazing together!
           </p>
         </motion.div>
 
