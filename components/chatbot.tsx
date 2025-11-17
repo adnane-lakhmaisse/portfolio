@@ -66,11 +66,17 @@ export function Chatbot() {
         }),
       })
 
+      const data = await response.json()
+
       if (!response.ok) {
-        throw new Error("Failed to get response")
+        console.error("API Error:", response.status, data)
+        throw new Error(data.error || `HTTP ${response.status}: ${response.statusText}`)
       }
 
-      const data = await response.json()
+      if (!data.message) {
+        throw new Error("No message in response")
+      }
+
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
@@ -79,12 +85,28 @@ export function Chatbot() {
       }
 
       setMessages((prev) => [...prev, assistantMessage])
-    } catch (error) {
+    } catch (error: any) {
       console.error("Chat error:", error)
+      
+      // Show more helpful error message
+      let errorContent = "Sorry, I'm having trouble responding right now. Please try again later."
+      
+      if (error?.message) {
+        if (error.message.includes("API key")) {
+          errorContent = "⚠️ OpenAI API key is not configured. Please set OPENAI_API_KEY in your environment variables."
+        } else if (error.message.includes("quota")) {
+          errorContent = "⚠️ API quota exceeded. Please check your OpenAI account."
+        } else if (error.message.includes("Invalid")) {
+          errorContent = "⚠️ Invalid API key. Please check your OPENAI_API_KEY configuration."
+        } else {
+          errorContent = `Sorry, there was an issue: ${error.message}`
+        }
+      }
+
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: "assistant",
-        content: "Sorry, I'm having trouble responding right now. Please try again later.",
+        content: errorContent,
         timestamp: new Date(),
       }
       setMessages((prev) => [...prev, errorMessage])

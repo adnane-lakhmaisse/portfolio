@@ -64,7 +64,7 @@ export function About() {
           <div className="relative w-full aspect-square max-w-md mx-auto rounded-2xl overflow-hidden border border-white/5 shadow-card">
             <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
             <Image
-              src="/profile.jpeg"
+              src="/profile-2.jpeg"
               alt="Adnane Lakhmaisse"
               fill
               className="object-cover"

@@ -21,6 +21,9 @@ const interDisplay = Inter({
 export const metadata: Metadata = {
   title: "Full-Stack Developer & UI Engineer",
   description: "Premium developer portfolio showcasing modern web development and design expertise.",
+  icons: {
+    icon: "/logo2.svg",
+  },
 }
 
 export default function RootLayout({
