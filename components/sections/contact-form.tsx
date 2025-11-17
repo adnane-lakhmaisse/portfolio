@@ -144,7 +144,7 @@ export function ContactForm() {
           </h2>
           <div className="h-px w-16 bg-white/10 mx-auto mb-6" />
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            Let's build something great together. I'm always open to discussing
+            Let&apos;s build something great together. I&apos;m always open to discussing
             new projects, creative ideas, or opportunities to be part of your vision.
           </p>
         </div>
